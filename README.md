@@ -98,10 +98,16 @@ The script stores data in an SQLite database with two tables: fixityRuns and bag
 
 ### Example Queries
 1. Get All Runs
-To retrieve all runs from the fixityRuns table: `SELECT * FROM fixityRuns;`
+To retrieve all runs from the fixityRuns table: 
+```
+SELECT * FROM fixityRuns;
+```
 
 2. Get All Bags in a Specific Run
-To retrieve all bags checked during a specific run (replace run_number with the actual run number): `SELECT * FROM bags WHERE runid = (SELECT id FROM fixityRuns WHERE run_num = run_number);`
+To retrieve all bags checked during a specific run (replace run_number with the actual run number): 
+```
+SELECT * FROM bags WHERE runid = (SELECT id FROM fixityRuns WHERE run_num = run_number);
+```
 
 3. Count of Valid and Invalid Bags
 To get the count of valid and invalid bags for each run:
@@ -115,10 +121,17 @@ GROUP BY run_num;
 ```
 
 4. Bags with Errors
-To find all bags that encountered errors during validation: `SELECT * FROM bags WHERE BagError IS NOT NULL OR ValidationError IS NOT NULL;`
+To find all bags that encountered errors during validation:
+
+```
+SELECT * FROM bags WHERE BagError IS NOT NULL OR ValidationError IS NOT NULL;
+```
 
 5. List of Missing Bags
-To list all bags that were marked as missing: `SELECT * FROM bags WHERE validation_outcome = 'Missing';`
+To list all bags that were marked as missing: 
+```
+SELECT * FROM bags WHERE validation_outcome = 'Missing';
+```
 
 To run these (and more) quries you can use any database browsing application that supports sqlite, or the sqlite command line interface.
 
