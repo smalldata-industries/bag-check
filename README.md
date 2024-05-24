@@ -9,7 +9,8 @@ Hello! This tool helps you automate fixity checks of collections of files stored
 3. [Setup](#setup)
 4. [Usage](#usage)
 5. [Email Notifications](#email-notifications)
-6. [Troubleshooting](#troubleshooting)
+6. [Advanced Usage](#advanced-usage)
+7. [Troubleshooting](#troubleshooting)
 
 ## Introduction
 
@@ -70,7 +71,10 @@ When you run the script it will look for a previous database file from past fixi
 
 Finally a PDF report is generated that summarizes the high level outcome, and lists the details for any errors that were encountered. If you have email enabled and configured, this PDF will be sent to the specified email address.
 
-### User Editable Settings
+
+## Email Notifications
+
+If you choose to enable email notifications, make sure to fill in the below email settings with your email account details. The script will send a report to the specified recipient and CC addresses after completing the fixity check.
 
 Before running the script, you can adjust the following settings:
 
@@ -88,10 +92,6 @@ cc = ''            # CC email address
 smtp_server = ''   # SMTP server address
 smtp_port = 0      # SMTP server port
 ```
-
-## Email Notifications
-
-If you choose to enable email notifications, make sure to fill in the email settings with your email account details. The script will send a report to the specified recipient and CC addresses after completing the fixity check.
 
 ## Advanced Usage
 The script stores data in an SQLite database with two tables: fixityRuns and bags. A new db is created each time the script is run, and it is named with the date and time of the check. Below are examples of how to query this database to extract useful information.
