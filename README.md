@@ -66,6 +66,10 @@ Root folder
 
 Then you would specify `-d 1` since all of the bags are one folder deep in the folder structure.
 
+When you run the script it will look for a previous database file from past fixity checks, and then it will attempt to validate all folders at the depth you specified. The full list of what bags were checked, and their outcome is recorded in the sqlite database named with the timestamp of when the check was run. 
+
+Finally a PDF report is generated that summarizes the high level outcome, and lists the details for any errors that were encountered. If you have email enabled and configured, this PDF will be sent to the specified email address.
+
 ### User Editable Settings
 
 Before running the script, you can adjust the following settings:
