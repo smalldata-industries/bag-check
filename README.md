@@ -1,7 +1,7 @@
 
 # Bag Check
 
-Hello! This tool helps you automate fixity checks of collections of files stored in the BagIt format, ensuring the integrity of your files. Follow the instructions below to get started.
+Hello! This tool helps you automate fixity checks of large collections of files stored in the BagIt format, ensuring the integrity of your files. Follow the instructions below to get started.
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -14,7 +14,7 @@ Hello! This tool helps you automate fixity checks of collections of files stored
 
 ## Introduction
 
-This tool is provided as-is, with no guarantees or warranties. It is a very basic script intended as a starting point for automating fixity checks, but has not been tested at large scale. Please use this script in a tightly controlled environment, as it includes an unsecured fixity check database and hard-coded email credentials (if you choose to utilize the email functionality)
+This tool is provided as-is, with no guarantees or warranties. It is a very basic script intended as a starting point for automating fixity checks. Please use this script in a tightly controlled environment, as it includes an unsecured sqlite database and if you choose to enable email notifications, requires hard-coded email credentials.
 
 ## Prerequisites
 
